@@ -8,15 +8,19 @@
   <title>SPABadge</title>
 </head>
 
+
+
+
+<body>
+  <!-- This stuff between the script tags is stored in the TemplateScript in the app.js file -->
 <script id="person_template" type="text/x-handlebars-template">
-  {{#each people}}
-    <li>{{this.name}}</li>
+  {{#each name}}
+  <li>{{name}}</li>
   {{/each}}
 </script>
 
 
 
-<body>
   <div class="container">
     <div class="logo">
       <h1> SPA Badge </h1>

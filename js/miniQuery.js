@@ -95,6 +95,18 @@ function miniQuery(selector){
     }
   };
 
+  element.append = function(newElement, content){
+    if (element.length){
+      for (var i = 0; i < element.length; i++){
+        var appendedElement = element[i].appendChild(document.createElement(newElement));
+        appendedElement.innerHTML=content;
+      }//For loop
+    } else {
+      var appendedElement = element.appendChild(newElement);
+      appendedElement.innerHTML = content;
+    }//if statment
+  };//#append
+
   return element;
 };
 
