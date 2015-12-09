@@ -81,6 +81,20 @@ function miniQuery(selector){
       }
     }
   };
+
+  element.html = function(content){
+    if (content === undefined) {
+      return element.innerHTML
+    } else {
+      if (element.length) {
+        for (i = 0; i < length; i++)
+          element[i].innerHTML = content
+      } else {
+        element.innerHTML = content
+      }
+    }
+  };
+
   return element;
 };
 
